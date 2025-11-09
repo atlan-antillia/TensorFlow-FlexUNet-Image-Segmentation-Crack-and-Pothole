@@ -237,17 +237,17 @@ By using this callback, on every epoch_change, the inference procedure can be ca
 <b>Epoch_change_inference output at starting (epoch 1,2,3)</b><br>
 <img src="./projects/TensorFlowFlexUNet/Crack-Pothole/asset/epoch_change_infer_at_start.png" width="1024" height="auto"><br>
 <br>
-<b>Epoch_change_inference output at middlepoint (epoch 23,24,25)</b><br>
+<b>Epoch_change_inference output at middlepoint (epoch 26,27,28,29)</b><br>
 <img src="./projects/TensorFlowFlexUNet/Crack-Pothole/asset/epoch_change_infer_at_middlepoint.png" width="1024" height="auto"><br>
 <br>
 
-<b>Epoch_change_inference output at ending (epoch 48,49,50)</b><br>
+<b>Epoch_change_inference output at ending (epoch 52,53,54,55)</b><br>
 <img src="./projects/TensorFlowFlexUNet/Crack-Pothole/asset/epoch_change_infer_at_end.png" width="1024" height="auto"><br>
 <br>
 
 
-In this experiment, the training process was terminated at epoch 50.<br><br>
-<img src="./projects/TensorFlowFlexUNet/Crack-Pothole/asset/train_console_output_at_epoch50.png" width="720" height="auto"><br>
+In this experiment, the training process was terminated at epoch 55.<br><br>
+<img src="./projects/TensorFlowFlexUNet/Crack-Pothole/asset/train_console_output_at_epoch55.png" width="720" height="auto"><br>
 <br>
 
 <a href="./projects/TensorFlowFlexUNet/Crack-Pothole/eval/train_metrics.csv">train_metrics.csv</a><br>
@@ -273,16 +273,16 @@ python ../../../src/TensorFlowFlexUNetEvaluator.py ./train_eval_infer.config
 </pre>
 
 Evaluation console output:<br>
-<img src="./projects/TensorFlowFlexUNet/Crack-Pothole/asset/evaluate_console_output_at_epoch50.png" width="720" height="auto">
+<img src="./projects/TensorFlowFlexUNet/Crack-Pothole/asset/evaluate_console_output_at_epoch55.png" width="720" height="auto">
 <br><br>Image-Segmentation-Crack-Pothole
 
 <a href="./projects/TensorFlowFlexUNet/Crack-Pothole/evaluation.csv">evaluation.csv</a><br>
 
-The loss (categorical_crossentropy) to this Crack-Pothole/test was low, and dice_coef_multiclass high as shown below.
+The loss (categorical_crossentropy) to this Crack-Pothole/test was not low, and dice_coef_multiclass not high as shown below.
 <br>
 <pre>
-categorical_crossentropy,0.0091
-dice_coef_multiclass,0.9951
+categorical_crossentropy,0.0203
+dice_coef_multiclass,0.9892
 </pre>
 <br>
 <h3>
