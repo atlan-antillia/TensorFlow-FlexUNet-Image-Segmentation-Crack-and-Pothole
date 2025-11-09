@@ -162,7 +162,7 @@ image_width    = 512
 image_height   = 512
 image_channels = 3
 
-num_classes    = 2
+num_classes    = 3
 
 base_filters   = 16
 base_kernels   = (9,9)
@@ -217,8 +217,8 @@ rgb color map dict for Crack-Pothole 1+1 classes.
 [mask]
 mask_datatype    = "categorized"
 mask_file_format = ".png"
-;                    Crack-Pothole:white
-rgb_map = {(0,0,0):0,(255,255,255):1,}
+;                   crack:green, pothole;red,   
+rgb_map = {(0,0,0):0,(0,255,0):1, (255,0, 0):2, }
 </pre>
 
 <b>Epoch change inference callback</b><br>
@@ -234,7 +234,7 @@ By using this callback, on every epoch_change, the inference procedure can be ca
  for 6 images in <b>mini_test</b> folder. This will help you confirm how the predicted mask changes 
  at each epoch during your training process.<br> <br> 
 
-<b>Epoch_change_inference output at starting (epoch 1,2,3)</b><br>
+<b>Epoch_change_inference output at starting (epoch 1,2,3,4)</b><br>
 <img src="./projects/TensorFlowFlexUNet/Crack-Pothole/asset/epoch_change_infer_at_start.png" width="1024" height="auto"><br>
 <br>
 <b>Epoch_change_inference output at middlepoint (epoch 26,27,28,29)</b><br>
